@@ -3,7 +3,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <stdarg.h>
 #include <string.h>
+#include <ctype.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -16,9 +20,9 @@
  */
 typedef struct stack_s
 {
-	        int n;
-		        struct stack_s *prev;
-			        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -60,16 +64,13 @@ extern struct global_s glob_var;
 void free_stack(stack_t **stack, char *msg);
 
 /* defined in instructions.c */
-void op_fun_res(stack_t **stack);
+void get_func(stack_t **stack);
 
 /* defined in tokenizer.c */
 void tokenizer(char *line_buff, const char *delims, stack_t **monty_stack);
 
 /* defined in opcodes.c */
 void push_monty(stack_t **stack, unsigned int line_number);
-void mul_monty(stack_t **stack, unsigned int line_number);
-void pchar_monty(stack_t **stack, unsigned int line_number);
-void pstr_monty(stack_t **stack, unsigned int line_number);
-void rotl_monty(stack_t **stack, unsigned int line_number);
+
 
 #endif
