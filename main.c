@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	size_t n = 0;
 	char *line_buff = NULL;
 	const char delims[] = " \t\n";
-	
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
