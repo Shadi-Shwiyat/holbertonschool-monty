@@ -63,7 +63,7 @@ void free_stack(stack_t **stack, char *msg);
 void op_fun_res(stack_t **stack);
 
 /* defined in tokenizer.c */
-void tokentime(char *line_buff, const char *delims, stack_t **stack_prime);
+void tokenizer(char *line_buff, const char *delims, stack_t **stack_prime);
 
 /* defined in opcodes.c */
 void push_monty(stack_t **stack, unsigned int line_number);
