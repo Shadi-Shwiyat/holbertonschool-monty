@@ -20,7 +20,7 @@ void swap_monty(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = nodeHold;
 	nodeHold->next = (*stack);
 	nodeHold->prev = NULL;
-	(*stack) = nodeHold;			
+	(*stack) = nodeHold;
 	(void) line_number;
 }
 

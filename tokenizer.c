@@ -2,7 +2,7 @@
 
 /**
  * tokenizer - function tokenizes
- * the bytecode file passed to it in 
+ * the bytecode file passed to it in
  * order to interpret the monty language
  *
  * @line: the line to tokenize
