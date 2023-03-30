@@ -71,6 +71,11 @@ void tokenizer(char *line_buff, const char *delims, stack_t **monty_stack);
 
 /* defined in opcodes.c */
 void push_monty(stack_t **stack, unsigned int line_number);
-
+void pall_monty(stack_t **stack, unsigned int line_number);
+void pint_monty(stack_t **stack, unsigned int line_number);
+void pop_monty(stack_t **stack, unsigned int line_number);
+void swap_monty(stack_t **stack, unsigned int line_number);
+void add_monty(stack_t **stack, unsigned int line_number);
+void nop_monty(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -21,7 +21,7 @@ void free_stack(stack_t **stack, char *msg)
 		if (msg[0] == '!')
 		{
 			msg++;
-			fprintf(stderr, "L%d%s%s\n", glob_var.op_line, msg, glob.op_code);
+			fprintf(stderr, "L%d%s%s\n", glob_var.op_line, msg, glob_var.op_code);
 		}
 		else
 			fprintf(stderr, "L%d%s", glob_var.op_line, msg);
