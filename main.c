@@ -1,5 +1,7 @@
 #include "monty.h"
 
+struct global_s glob_var;
+
 /**
  * main - The entry point for the monty program,
  * runs the monty bytecode interpreter

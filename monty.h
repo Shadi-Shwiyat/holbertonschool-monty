@@ -35,6 +35,41 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global_s - global struct
+ * @op_code: the opcode
+ * @op_arg: associated argument if applicable
+ * @op_line: line of inbound file
+ * @line_ref: pointer to line
+ * @file_ref: pointer to FILE
+ * Description: The Way
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct global_s
+{
+	char *op_code;
+	char *op_arg;
+	unsigned int op_line;
+	char *line_ref;
+	FILE *file_ref;
+} global_t;
 
+extern struct global_s glob_var;
+
+/* defined in freedom.c */
+void free_stack(stack_t **stack, char *msg);
+
+/* defined in instructions.c */
+void op_fun_res(stack_t **stack);
+
+/* defined in tokenizer.c */
+void tokentime(char *line_buff, const char *delims, stack_t **stack_prime);
+
+/* defined in opcodes.c */
+void push_monty(stack_t **stack, unsigned int line_number);
+void mul_monty(stack_t **stack, unsigned int line_number);
+void pchar_monty(stack_t **stack, unsigned int line_number);
+void pstr_monty(stack_t **stack, unsigned int line_number);
+void rotl_monty(stack_t **stack, unsigned int line_number);
 
 #endif
